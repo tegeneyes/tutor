@@ -78,9 +78,6 @@ function Hero() {
           initial="hidden"
           animate="show"
         >
-          <motion.span variants={fadeUp} className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1.5 text-xs font-semibold text-accent-foreground">
-            <Users className="h-4 w-4" /> Tutoring Opportunities in Ethiopia
-          </motion.span>
           <motion.h1 variants={fadeUp} className="text-3xl font-extrabold leading-[1.12] tracking-tight text-foreground sm:text-4xl xl:text-[42px]">
             Tutoring jobs for Ethiopian university students and graduates —{" "}
             <span className="text-primary">at home or online.</span>
@@ -161,7 +158,7 @@ function StudentsCard() {
         </ul>
         <motion.div variants={fadeUp} className="mt-7">
           <Button asChild variant="brand" size="xl" className="w-full sm:w-auto">
-            <Link to="/jobs">Find Tutoring Jobs <ArrowRight /></Link>
+            <Link to="/jobs">Find Tutoring Jobs <IconArrowRight /></Link>
           </Button>
         </motion.div>
       </div>
@@ -279,7 +276,7 @@ function HowItWorks() {
               <span className={`relative mt-4 block h-1 w-8 rounded-full ${s.bar} transition-all duration-300 group-hover:w-16`} />
             </div>
             {i < STEPS.length - 1 && (
-              <span aria-hidden className="absolute right-0 top-1/2 z-10 hidden h-6 w-6 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full border border-border bg-background text-muted-foreground xl:grid">
+              <span aria-hidden className="absolute right-0 top-1/2 z-10 hidden h-6 w-6 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full border border-border bg-background text-muted-foreground">
                 <IconChevronRight className="h-3.5 w-3.5" />
               </span>
             )}
@@ -299,7 +296,7 @@ function Subjects() {
           <motion.div variants={fadeUp}>
             <Link
               to="/jobs"
-              className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-primary transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-card focus-visible:outline-2 focus-visible:outline-ring"
+              className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-primary transition hover:-translate-y-0.5 hover:border-primary/30 hover:bg-primary/5"
             >
               View All Subjects
               <IconArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -313,7 +310,7 @@ function Subjects() {
             <Link
               to="/jobs"
               search={{ subject: s.slug }}
-              className="group flex h-full items-center gap-3 rounded-xl border border-border bg-card p-3.5 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-card focus-visible:outline-2 focus-visible:outline-ring"
+              className="group flex h-full items-center gap-3 rounded-xl border border-border bg-card p-3.5 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-card"
             >
               <span className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl ${s.bg} ${s.fg} transition-transform duration-300 group-hover:scale-110`}>
                 <s.icon className="h-6 w-6" />
